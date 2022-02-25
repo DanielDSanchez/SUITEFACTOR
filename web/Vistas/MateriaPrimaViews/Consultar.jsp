@@ -18,6 +18,9 @@
             <h1 class="text-center">Materia Prima</h1>
             
             <br>
+            <div class="col-md-4">
+                <a class="btn btn-outline-primary mt-2" href="ControladorMateriaPrima?accion=registrar">Agregar Materia Prima</a>
+            </div>
             <br>
             <table class="table table-info table-bordered table-hover table-responsive">
                 <thead>

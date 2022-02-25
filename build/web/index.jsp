@@ -21,7 +21,8 @@
         </div>
 
         <div class="col-md-2 mx-auto mt-4 ms-auto">
-            <a class="btn btn-outline-primary " href="Vistas/MateriaPrimaViews/Consultar.jsp">Consultar Materia Prima</a>
+            <a class="btn btn-outline-primary " href="ControladorMateriaPrima?accion=consultar">Consultar Materia Prima</a>
+            <a class="btn btn-outline-primary mt-2" href="ControladorMateriaPrima?accion=registrar">Agregar Materia Prima</a>
         </div>
         
         

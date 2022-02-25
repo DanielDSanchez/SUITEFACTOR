@@ -15,7 +15,7 @@ import java.util.List;
 public interface CRUD {
     public List consultar();
     public MateriaPrima consult(int id);
-    public boolean agregar(MateriaPrima mp);
+    public boolean registrar(MateriaPrima mp);
     public boolean editar(MateriaPrima mp);
     public boolean eliminar(int id);
 }
