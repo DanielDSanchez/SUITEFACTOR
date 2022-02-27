@@ -7,8 +7,10 @@ package Controlador;
 
 import Modelo.MateriaPrima;
 import ModeloDAO.MateriaPrimaDAO;
+import ModeloVO.Usuario;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -22,6 +24,7 @@ import javax.servlet.http.HttpServletResponse;
 public class ControladorMateriaPrima extends HttpServlet {
     String consultar = "Vistas/MateriaPrimaViews/Consultar.jsp";
     String registrar = "Vistas/MateriaPrimaViews/Registrar.jsp";
+    String index = "index.jsp";
     MateriaPrima mp = new MateriaPrima();
     MateriaPrimaDAO mtDAO = new MateriaPrimaDAO();
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -32,13 +35,17 @@ public class ControladorMateriaPrima extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet ControladorMateriaPrima</title>");            
+            out.println("<title>Servlet x</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet ControladorMateriaPrima at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet x at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
+        //ArrayList<Usuario> listaUsuarios = mtDAO.listarUsuarios();
+        //request.setAttribute("listarU",listaUsuarios);
+        
+    
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -58,21 +65,25 @@ public class ControladorMateriaPrima extends HttpServlet {
         if(action.equalsIgnoreCase("consultar")){
             acceso=consultar;
         }else if(action.equalsIgnoreCase("registrar")){
+            ArrayList<Usuario> listaUsuarios = mtDAO.listarUsuarios();
+            request.setAttribute("listaU",listaUsuarios);
             acceso=registrar;
         }else if(action.equalsIgnoreCase("Agregar")){
-            String id,idU;
+            String idU;
             String Nom;
-            id = request.getParameter("idmt");
             Nom = request.getParameter("nombremt");
-            idU = request.getParameter("idx");
-            mp.setId(Integer.parseInt(id));
+            idU = request.getParameter("usuarioId");
             mp.setIdUs(Integer.parseInt(idU));
             mp.setNombre(Nom);
             mtDAO.registrar(mp);
             acceso=consultar;
+        }else if(action.equalsIgnoreCase("index")){
+            acceso=index;
         }
+
         RequestDispatcher vista=request.getRequestDispatcher(acceso);
         vista.forward(request, response);
+        
     }
 
     /**

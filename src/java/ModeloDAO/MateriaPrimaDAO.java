@@ -5,6 +5,8 @@
  */
 package ModeloDAO;
 
+import ModeloVO.Usuario;
+import java.util.ArrayList;
 import Config.Conexion;
 import Modelo.MateriaPrima;
 import java.sql.Connection;
@@ -12,6 +14,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import static java.util.Collections.list;
 import java.util.List;
 
 /**
@@ -27,6 +30,29 @@ public class MateriaPrimaDAO implements Interfaces.CRUD
     MateriaPrima mp = new MateriaPrima();
     boolean Operacion = false;
 
+    public ArrayList<Usuario> listarUsuarios(){
+        ArrayList<Usuario> Usuarios = new ArrayList<Usuario>();
+        String sql = "select * from usuarios";
+        try{
+             Cn = conexion.obtenerConexion();
+             puente = Cn.prepareStatement(sql);
+             mensajero = puente.executeQuery();
+             while(mensajero.next()){
+                 Usuario usuario = new Usuario();
+                 usuario.setId_Usuarios(mensajero.getInt("Id_Usuarios"));
+                 usuario.setNombre(mensajero.getString("Nombre"));
+                 usuario.setDocumento(mensajero.getString("Documento"));
+                 usuario.setTelefono(mensajero.getString("Telefono"));
+                 usuario.setEmail(mensajero.getString("Email"));
+                 usuario.setDireccion(mensajero.getString("Direccion"));
+                 Usuarios.add(usuario);
+             }
+        }catch(Exception e){
+            
+        }
+        return Usuarios;
+    };  
+    
     @Override
     public List consultar() {
         ArrayList<MateriaPrima>list = new ArrayList<>();
@@ -48,6 +74,7 @@ public class MateriaPrimaDAO implements Interfaces.CRUD
         }
         return list;
     };
+    
 
     @Override
     public MateriaPrima consult(int id) {
@@ -56,16 +83,8 @@ public class MateriaPrimaDAO implements Interfaces.CRUD
 
     @Override
     public boolean registrar(MateriaPrima mp) {
-      String sql = "insert into materia_prima(Id_materiaPrima,Nombre,Id_Usuarios) values('"+mp.getId()+"','"+mp.getNombre()+"','"+mp.getIdUs()+"')"; 
+      String sql = "insert into materia_prima(Nombre,Id_Usuarios) values('"+mp.getNombre()+"','"+mp.getIdUs()+"')"; 
       try{
-          /*Cn = conexion.obtenerConexion();
-          puente.executeUpdate();
-          puente.setInt(1,mp.getId());
-          puente.setInt(3,mp.getIdUs() );
-          puente.setString(2,mp.getNombre());
-          puente = Cn.prepareStatement(sql);
-          puente.executeUpdate();
-          Operacion = true;*/
           Cn=conexion.obtenerConexion();
           puente=Cn.prepareStatement(sql);
           puente.executeUpdate();

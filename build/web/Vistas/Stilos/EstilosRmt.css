@@ -1,0 +1,36 @@
+.Fondo1{
+    background-color: #24303c;
+    margin-top: 2em;
+    height: 20em;
+    border-radius: 5%;
+}
+
+.btn{
+    background-color: rgb(99,149,189);
+}
+.Titulo{
+    font-size: 2rem;
+    margin-right: 10px;
+    margin-bottom: 40px;
+    color: rgb(99,149,189);
+}
+
+.in{
+    background-color:  #6f8296;;
+    border: 1px solid rgb(99,149,189);
+    
+}
+.in:focus{
+    background-color:  #24303c;
+    color: white;
+    
+}
+
+.L{
+    font-size: 2em;
+}
+
+.t{
+    color: red;
+    background-color: red;
+}
