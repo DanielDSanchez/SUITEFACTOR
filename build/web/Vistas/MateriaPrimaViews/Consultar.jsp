@@ -1,6 +1,6 @@
 
 <%@page import="java.util.Iterator"%>
-<%@page import="Modelo.MateriaPrima"%>
+<%@page import="ModeloVO.MateriaPrima"%>
 <%@page import="java.util.List"%>
 <%@page import="ModeloDAO.MateriaPrimaDAO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -55,9 +55,9 @@
             <table class="table table-dark table-bordered table-hover table-responsive">
                 <thead >
                     <tr >
-                        <th class=" text-center">ID</th>
-                        <th class=" text-center">NOMBRES</th>
-                        <th class=" text-center">ID Usuario</th>
+                        <th class=" text-center">Id</th>
+                        <th class=" text-center">Nombre</th>
+                        <th class=" text-center">Estado</th>
                     </tr>
                 </thead>
                 <%
@@ -73,7 +73,7 @@
                     <tr>
                         <td class=" text-center"><%= per.getId()%></td>
                         <td class=" text-center"><%= per.getNombre()%></td>
-                        <td class=" text-center"><%= per.getIdUs()%></td>
+                        <td class=" text-center"><%= per.getEstado()%></td>
                         
                     </tr>
                     <%}%>

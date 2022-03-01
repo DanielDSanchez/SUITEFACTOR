@@ -63,12 +63,17 @@
                         <input type="text" class="in form-control text-light" name="nombremt">
                     </div>
                     <div class="mb-3">
-                        <label class="form-label text-light"><b>Id Usuario</b></label>
-                        <% 
+                        <label class="form-label text-light"><b>Estado</b></label>
+                        <select class="in form-select text-light" name="estado">
+                            <option selected>Despliega las Opciones</option>
+                            <option value="Activo">Activo</option>
+                            <option value="Inactivo">Inactivo</option>
+                        </select>
+                      <%--   <% 
                          ArrayList<Usuario> listaUsuarios = (ArrayList<Usuario>) request.getAttribute("listaU");
                         %>
-                        <select class="in form-select text-light" name="usuarioId">
-                            <option selected>Despliega las opciones</option>
+                        /*<select class="in form-select text-light" name="usuarioId">
+                            <option selected>Despliega las opciones</option>*
                             <%
                               for(Usuario u : listaUsuarios){ %>
                               
@@ -77,7 +82,7 @@
                               }      
                             
                             %>                           
-                        </select> 
+                        </select> --%>
                     </div>
                     <div class="col-md-6 mt-2 m">
                         <button type="submit" class="btn text-light" name="accion" value="Agregar"><b>Guardar</b></button>

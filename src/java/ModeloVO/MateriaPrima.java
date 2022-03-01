@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Modelo;
+package ModeloVO;
 
 /**
  *
@@ -12,12 +12,12 @@ package Modelo;
 public class MateriaPrima {
     int id;
     String nombre;
-    int idUs;
+    String estado;
 
-    public MateriaPrima(int id, String nombre, int idUs) {
+    public MateriaPrima(int id, String nombre, String estado) {
         this.id = id;
         this.nombre = nombre;
-        this.idUs = idUs;
+        this.estado = estado;
     }
 
     public MateriaPrima() {
@@ -39,12 +39,12 @@ public class MateriaPrima {
         this.nombre = nombre;
     }
 
-    public int getIdUs() {
-        return idUs;
+    public String getEstado() {
+        return estado;
     }
 
-    public void setIdUs(int idUs) {
-        this.idUs = idUs;
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
     
 }

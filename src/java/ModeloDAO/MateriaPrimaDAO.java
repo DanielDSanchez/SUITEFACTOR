@@ -8,7 +8,7 @@ package ModeloDAO;
 import ModeloVO.Usuario;
 import java.util.ArrayList;
 import Config.Conexion;
-import Modelo.MateriaPrima;
+import ModeloVO.MateriaPrima;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -30,7 +30,7 @@ public class MateriaPrimaDAO implements Interfaces.CRUD
     MateriaPrima mp = new MateriaPrima();
     boolean Operacion = false;
 
-    public ArrayList<Usuario> listarUsuarios(){
+    /*public ArrayList<Usuario> listarUsuarios(){
         ArrayList<Usuario> Usuarios = new ArrayList<Usuario>();
         String sql = "select * from usuarios";
         try{
@@ -51,7 +51,7 @@ public class MateriaPrimaDAO implements Interfaces.CRUD
             
         }
         return Usuarios;
-    };  
+    }; */ 
     
     @Override
     public List consultar() {
@@ -63,9 +63,9 @@ public class MateriaPrimaDAO implements Interfaces.CRUD
              mensajero = puente.executeQuery();
              while(mensajero.next()){
                  MateriaPrima materiaPrima = new MateriaPrima();
-                 materiaPrima.setId(mensajero.getInt("Id_materiaPrima"));
+                 materiaPrima.setId(mensajero.getInt("Id_materia_Prima"));
                  materiaPrima.setNombre(mensajero.getString("Nombre"));
-                 materiaPrima.setIdUs(mensajero.getInt("Id_Usuarios"));
+                 materiaPrima.setEstado(mensajero.getString("Estado"));
                  list.add(materiaPrima);
              }
              
@@ -83,7 +83,7 @@ public class MateriaPrimaDAO implements Interfaces.CRUD
 
     @Override
     public boolean registrar(MateriaPrima mp) {
-      String sql = "insert into materia_prima(Nombre,Id_Usuarios) values('"+mp.getNombre()+"','"+mp.getIdUs()+"')"; 
+      String sql = "insert into materia_prima(Nombre,Estado) values('"+mp.getNombre()+"','"+mp.getEstado()+"')"; 
       try{
           Cn=conexion.obtenerConexion();
           puente=Cn.prepareStatement(sql);

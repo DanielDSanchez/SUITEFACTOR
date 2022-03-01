@@ -5,7 +5,7 @@
  */
 package Controlador;
 
-import Modelo.MateriaPrima;
+import ModeloVO.MateriaPrima;
 import ModeloDAO.MateriaPrimaDAO;
 import ModeloVO.Usuario;
 import java.io.IOException;
@@ -65,15 +65,15 @@ public class ControladorMateriaPrima extends HttpServlet {
         if(action.equalsIgnoreCase("consultar")){
             acceso=consultar;
         }else if(action.equalsIgnoreCase("registrar")){
-            ArrayList<Usuario> listaUsuarios = mtDAO.listarUsuarios();
-            request.setAttribute("listaU",listaUsuarios);
+            /*ArrayList<Usuario> listaUsuarios = mtDAO.listarUsuarios();
+            request.setAttribute("listaU",listaUsuarios);*/
             acceso=registrar;
         }else if(action.equalsIgnoreCase("Agregar")){
-            String idU;
+            String Est;
             String Nom;
             Nom = request.getParameter("nombremt");
-            idU = request.getParameter("usuarioId");
-            mp.setIdUs(Integer.parseInt(idU));
+            Est = request.getParameter("estado");
+            mp.setEstado(Est);
             mp.setNombre(Nom);
             mtDAO.registrar(mp);
             acceso=consultar;

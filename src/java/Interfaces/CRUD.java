@@ -5,7 +5,7 @@
  */
 package Interfaces;
 
-import Modelo.MateriaPrima;
+import ModeloVO.MateriaPrima;
 import java.util.List;
 
 /**
