@@ -1,0 +1,188 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 4/04/2022, 08:15:50 AM
+    Author     : Sena
+*/
+
+.b1{
+    background-color: #32A5E7;
+    color: white;
+}
+
+
+header
+{
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+}
+.navbar
+{
+    padding: 20px 0;
+}
+.navbar-brand
+{
+    width: 262px;
+    height: 120px;
+}
+.nav-item
+{
+    font-weight: 500;
+}
+.navbar-light .navbar-nav .nav-item .nav-link:hover,
+.navbar-light .navbar-nav .nav-item.active .nav-link
+{
+    background: #6395BB;
+    color: #fff;
+}
+.navbar-light .navbar-nav .nav-item .nav-link
+{
+    color: #fff;
+    padding: 5px 15px;
+}
+.navbar-light .navbar-nav .nav-item2 .nav-link:hover,
+.navbar-light .navbar-nav .nav-item2.active2 .nav-link
+{
+    background: #70706F;
+    color: #fff;
+}
+.navbar-light .navbar-nav .nav-item2 .nav-link
+{
+    color: #fff;
+    padding: 5px 15px;
+}
+.banner
+{
+    position: relative;
+    background: url("https://wallpaperaccess.com/full/2091374.jpg");
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    padding: 250px 0 200px;
+}
+.banner h2
+{
+    margin: 0;
+    padding: 0;
+    font-size: 2.8em;
+    font-weight: 500;
+    color: #fff;
+}
+.navbar-light .navbar-toggler
+{
+    border: none;
+    color: #fff;
+    border: 1px solid #7f7f7f;
+    border-radius: 0;
+    outline: none;
+}
+/* .navbar-collapse
+{
+  background: #fff;
+} */
+
+@media (max-withd: 768px)
+{
+    .banner
+    {
+        padding: 200px 0 ;
+    }
+    .banner h2
+    {
+        font-size: 1.8em;
+    }
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+.bd-placeholder-img {
+    text-anchor: middle;
+    user-select: none;
+}
+
+.informacion
+{
+    flex:1;
+    padding-left:50px;
+}
+
+.todoInfo
+{
+    color:#000000b3;
+    margin-bottom:20px;
+    line-height:1.4;
+    font-size:17px;
+    text-align: center;
+}
+
+.modulos
+{
+    text-align:center;
+}
+.tituloModulos
+{
+    font-family:'Quicksand',sans-serif;
+    font-size:40px;
+    text-align:center;
+    margin-top:50px;
+    margin-bottom: 30px;
+    color: #6395BB;
+}
+.listaIconos
+{
+    display:flex;
+    flex-wrap:wrap;
+}
+.tresIconos
+{
+    flex:1;
+    padding:30px;
+}
+.tituloIconos
+{
+    font-family:'Quicksand',sans-serif;
+    color: #6395BB;
+    margin-top: 15px;
+}
+.descripcionIconos
+{
+    display: block;
+    text-align:center;
+    font-family:'Quicksand',sans-serif;
+    color:#000000b3;
+    font-weight:500;
+    font-size:15px;
+}
+.icono1-img
+{
+    background-repeat:no-repeat;
+    background-size:cover;
+    width:120px;
+    height:120px;
+}
+
+.st0{fill:#F0C4DB;}
+.st1{fill:#FF9D9C;}
+.st2{fill:#9BEAF9;}
+.st3{fill:#E9F4BC;}
+.st4{fill:#505050;}
+.st5{fill:#FEBECC;}
+.st6{fill:#FFFFFF;}
+.st7{fill:#FDE4A1;}
+.st8{fill:#FEE7B5;}
+.st9{fill:#CDF6FC;}
+.st10{fill:#F2C6DD;}
+.st11{opacity:0.1;}
+.cls-1{fill:#71706f;}
+.cls-2{fill:#6395bb;}
+.cls-3{fill:#585857;}
+.cls-4{fill:#fff;}
+.cls-5{fill:#4e819f;}
+
+

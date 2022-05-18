@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="18a0f5a2-4cab-4458-828c-895404af05f1">
+	<property name="ireport.zoom" value="1.210000000000023"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select * from lotemateriaprimaview]]>
+	</queryString>
+	<field name="Id_loteMateria_Prima" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nombre" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cantidad" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Observaciones" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fecha_ingreso" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fecha_salida" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="91" splitType="Stretch"/>
+	</title>
+	<detail>
+		<band height="70" splitType="Stretch">
+			<elementGroup/>
+			<rectangle>
+				<reportElement x="43" y="10" width="473" height="49" uuid="04f24556-5d46-4272-90c6-1d1aae9c6288"/>
+			</rectangle>
+			<line>
+				<reportElement x="43" y="33" width="473" height="1" uuid="b9861cca-62f6-46d4-8bac-a804fbc48dce"/>
+			</line>
+			<line>
+				<reportElement x="82" y="10" width="1" height="49" uuid="b2a72027-53ef-4a9a-8485-73f25cf9312d"/>
+			</line>
+			<line>
+				<reportElement x="146" y="10" width="1" height="49" uuid="99df014c-c70a-40a8-a066-4c786dda711e"/>
+			</line>
+			<line>
+				<reportElement x="216" y="10" width="1" height="49" uuid="67e2b3ee-287f-451f-8d21-e5ce65d53443"/>
+			</line>
+			<line>
+				<reportElement x="325" y="10" width="1" height="49" uuid="e33066de-3812-4a84-a555-24f959482e9c"/>
+			</line>
+			<line>
+				<reportElement x="423" y="10" width="1" height="49" uuid="5af89cb2-b458-4c43-b204-e30fa6c9cb13"/>
+			</line>
+			<staticText>
+				<reportElement x="43" y="14" width="39" height="20" uuid="2c5c3e6e-d43d-4094-a5f2-0798d2bfbf29"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Id_loteMateria_Prima]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="44" y="38" width="36" height="20" uuid="e62c63e7-f617-4c23-be3e-c552b93fd774"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Id_loteMateria_Prima}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="83" y="14" width="63" height="20" uuid="e64213fd-1e29-40d3-9cbb-7e82ebfa36f4"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="82" y="38" width="65" height="20" uuid="8b83f61f-5d5d-4a74-8958-f3bb443b192e"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Nombre}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="147" y="14" width="69" height="20" uuid="c9333c71-baff-443a-878d-a4309d23f932"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[cantidad]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="147" y="39" width="70" height="20" uuid="6db579c0-3cbb-4de0-8f6e-2189b1ebae17"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{cantidad}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="216" y="14" width="100" height="20" uuid="dc9ae0cc-06c8-45e8-b61e-67500fe4348f"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Observaciones]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="217" y="39" width="100" height="20" uuid="c19285c5-ca97-4f2b-a3d0-1b37c1f59912"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Observaciones}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="326" y="14" width="100" height="20" uuid="741d5ca5-3844-4f06-88bf-f29cb9e12770"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[fecha_ingreso]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="326" y="38" width="100" height="20" uuid="6a35f4d3-6094-4564-a1c6-4abed9779058"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{fecha_ingreso}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="424" y="14" width="100" height="20" uuid="14ec880d-ec0e-4ef1-a917-037d7923041d"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[fecha_salida]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="423" y="38" width="100" height="20" uuid="c030045a-b38a-4638-8e08-8ba956e41fa0"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{fecha_salida}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="537" y="34" width="18" height="20" uuid="8822c810-9553-4d80-b2f8-ac1b05c24993"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="34" width="100" height="20" uuid="d19793be-2f43-43bb-9f01-fc4eed874cca"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="h.mm a">
+				<reportElement x="100" y="34" width="100" height="20" uuid="0b6079e6-8583-496e-8cc0-51d68dedcb82"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

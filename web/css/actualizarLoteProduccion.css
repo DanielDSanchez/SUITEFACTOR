@@ -1,0 +1,23 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 22-abr-2022, 17:50:35
+    Author     : SALA
+*/
+
+.caja{
+    
+    border-color:#094e75 ;
+    
+    height: 33em;
+    border-radius: 5%;
+}
+
+.boton{
+    background-color: #32A5E7;
+    height: 3em;
+    color: white;
+}

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="18a0f5a2-4cab-4458-828c-895404af05f1">
+	<property name="ireport.zoom" value="1.1000000000000163"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="roltipo" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from usuariorolview where roltipo = $P{roltipo}]]>
+	</queryString>
+	<field name="ROLTIPO" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Nombre" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="91" splitType="Stretch"/>
+	</title>
+	<detail>
+		<band height="86" splitType="Stretch">
+			<rectangle>
+				<reportElement x="173" y="6" width="210" height="50" uuid="e46a66b3-72de-44ae-918c-08659262161d"/>
+			</rectangle>
+			<textField>
+				<reportElement x="179" y="32" width="100" height="20" uuid="1d2e5c7a-4504-4ba1-a190-fe88dd32008b"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{ROLTIPO}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="179" y="8" width="100" height="20" uuid="bb5af967-d355-4e9a-b6ca-553c256b144c"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Rol]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="279" y="33" width="100" height="20" uuid="8efc7b5d-fb45-4ad0-92c3-5edbd229129b"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Nombre}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="279" y="8" width="100" height="20" uuid="a34e1bbb-e024-4337-8bd4-addf9343a395"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Usuario]]></text>
+			</staticText>
+			<line>
+				<reportElement x="173" y="29" width="206" height="1" uuid="b3d21dc0-8238-4853-aa7d-db6798647b25"/>
+			</line>
+			<line>
+				<reportElement x="279" y="6" width="1" height="50" uuid="0a2dcf35-b447-4d96-8d45-0cdfd08f1c5d"/>
+			</line>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="455" y="34" width="100" height="20" uuid="8822c810-9553-4d80-b2f8-ac1b05c24993"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="34" width="100" height="20" uuid="d19793be-2f43-43bb-9f01-fc4eed874cca"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="h.mm a">
+				<reportElement x="100" y="34" width="100" height="20" uuid="0b6079e6-8583-496e-8cc0-51d68dedcb82"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
